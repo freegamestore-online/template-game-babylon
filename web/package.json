@@ -8,20 +8,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@babylonjs/core": "^7",
-    "@babylonjs/gui": "^7",
-    "@babylonjs/loaders": "^7",
-    "react": "^19",
-    "react-dom": "^19"
+    "@babylonjs/core": "^7.54.3",
+    "@babylonjs/gui": "^7.54.3",
+    "@babylonjs/loaders": "^7.54.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@vitejs/plugin-react": "^4.3",
-    "tailwindcss": "^4.1",
-    "typescript": "^5.7",
-    "vite": "^6"
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3"
   }
 }
