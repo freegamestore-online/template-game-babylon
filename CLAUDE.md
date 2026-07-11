@@ -1,10 +1,10 @@
 # APPNAME
 
-## Platform: FreeAppStore
+## Platform: FreeGameStore
 - Hosted on Cloudflare R2 (static SPA, served by host Worker)
 - ONE environment only (production). No dev/staging. Fix forward, no rollbacks.
 - Push to `main` auto-deploys to production via R2
-- Domain: APPNAME.freeappstore.online
+- Domain: APPNAME.freegamestore.online
 
 ## Tech Stack
 - TypeScript, React 19, Vite 6, Tailwind CSS 4.1, pnpm
@@ -28,5 +28,5 @@
 - No analytics, no tracking, no cookies
 - All user data in localStorage only
 - App must work offline after first load
-- Include "Part of FreeAppStore" link in settings/sidebar
+- Include "Part of FreeGameStore" link in settings/sidebar
 - MIT license
