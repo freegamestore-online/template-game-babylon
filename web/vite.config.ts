@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          babylon: ["@babylonjs/core", "@babylonjs/gui", "@babylonjs/loaders"],
+        advancedChunks: {
+          groups: [{ name: "babylon", test: /node_modules[\\/]@babylonjs/ }],
         },
       },
     },
