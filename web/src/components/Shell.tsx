@@ -6,7 +6,7 @@ interface ShellProps {
 
 export function Shell({ children }: ShellProps) {
   return (
-    <div style={{ width: "100%", height: "100dvh", overflow: "hidden" }}>
+    <div className="h-dvh w-full overflow-hidden">
       {children}
     </div>
   );

@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <Shell>
-      <canvas ref={canvasRef} style={{ width: "100%", height: "100%", display: "block" }} />
+      <canvas ref={canvasRef} className="block h-full w-full" />
     </Shell>
   );
 }

@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Tailwind scans the games SDK build for its class names (@freegamestore/games). */
+@source "../node_modules/@freegamestore/games/dist";
+
+/* Token utilities: bg-panel, text-ink, text-muted, border-line, text-accent, text-danger, … */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-display: "Fraunces", serif;
+}
+
 :root {
   --paper: #ffffff;
   --bg: #ffffff;
@@ -8,11 +25,9 @@
   --line: #e5e7eb;
   --line-strong: #d1d5db;
   --panel: #f9fafb;
-  --glass: rgba(255, 255, 255, 0.8);
-  --dock: #ffffff;
   --success: #16a34a;
   --warning: #d97706;
-  --error: #dc2626;
+  --danger: #dc2626;
   --accent: #2563eb;
   font-family: "Manrope", system-ui, sans-serif;
 }
@@ -26,11 +41,9 @@
     --line: #2d2d2d;
     --line-strong: #404040;
     --panel: #1a1a1a;
-    --glass: rgba(15, 15, 15, 0.8);
-    --dock: #1a1a1a;
     --success: #22c55e;
     --warning: #fbbf24;
-    --error: #ef4444;
+    --danger: #ef4444;
   }
 }
 
