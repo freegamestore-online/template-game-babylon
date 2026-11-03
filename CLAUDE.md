@@ -28,7 +28,7 @@
 - No analytics, no tracking, no cookies
 - All user data in localStorage only
 - App must work offline after first load
-- Include "Part of FreeGameStore" link in settings/sidebar
+- Do not add platform attribution bars to the game frame.
 - MIT license
 
 ## Styling
