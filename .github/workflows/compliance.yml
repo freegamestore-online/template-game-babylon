@@ -1,0 +1,40 @@
+name: Platform Compliance
+
+# The same `fgs check` gate every game gets from
+# freegamestore-online/ci-workflows game-ci.yml, run on a scaffolded copy:
+# APPNAME is substituted the way `fgs init` does it, because an unscaffolded
+# template always fails the placeholder check. Keep the pin in step with
+# game-ci.yml's compliance_cli_version so a game made from this template
+# passes its first deploy.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scaffold (substitute APPNAME like fgs init)
+        run: grep -rlI --exclude-dir=.git APPNAME . | xargs -r sed -i 's/APPNAME/templatecheck/g'
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Platform compliance
+        run: npx -y "@freegamestore/cli@0.2.7" check
